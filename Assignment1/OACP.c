@@ -1,41 +1,47 @@
 #include<stdio.h>
-#include<math.h>
 
 //output function for output format
-void output(char (*ACD)[3]){
-	//integer to track decimal for output
-	int d=0;
-
-	//integer to track number of elements in the array
-	int s =(sizeof((*ACD)) / sizeof((*ACD)[0]));
-
-	printf("Your permissions are:\n");
-	printf("character format: %s\n", (*ACD));
-	printf("binary format: ");
-
-	//looping through the character array to print binary if each permission is yes or not
-	for(int i=0; i< s; i++){
-		
-		if ((*ACD)[i] == 'Y' || (*ACD)[i] == 'y'){
-			printf("1");
-			d += pow(2, s-i-1);
-		}else {
-			printf("0");
-		}
-	
-	}
-	printf("\nDecimal format: %d", d);
+void output(char ACD){
+	printf("%c", ACD);
 }
 
 int main(){
 	//access control descriptor string
-	char ACD[3];
-
+	char ACD = 0;
+	char val = 'd';
+	int d =0;
 	//asking for and getting the ACD input
-	printf("Enter your 3 character long permission descriptor: ");
-	scanf("%s", ACD);
+	printf("Enter your following permissions (y/n)\n");
+	
+	printf("Permission to read (1st): ");
+	scanf(" %c", &val);
+
+	if (val == 'y' || val == 'Y'){
+		ACD++;
+		ACD << 2;
+	}
+
+	printf("Permission to write (2nd): ");
+	scanf(" %c", &val);
+
+	if (val == 'y' || val == 'Y'){
+		ACD++;
+		ACD << 1;
+	}
+
+	printf("Permission to execute (3rd): ");
+	scanf(" %c", &val);
+
+	if (val == 'y' || val == 'Y'){
+		ACD++;
+	}
 	
 	//calling output function
-	output(&ACD);
+	//output(ACD);
+
+	printf("%c lol", ACD);
+
+	printf("\n%d", ACD);
+
 	return 0;
 }
