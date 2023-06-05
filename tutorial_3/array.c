@@ -1,10 +1,13 @@
 #include <stdio.h>
 
 int main() {
-  int    array1[5];
-  float  array2[3];
-  double array3[6];
-  char   array4[10];
+  //initalizing arrays and rowSums
+  int    array1[5] = {0, 1, 2, 3, 4};
+  float  array2[3] = {0.25, 0.5, 0.75};
+  double array3[6] = {0.255, 123.5, 6436, 123235, 364361, 0.0000252};
+  char   array4[10] = "cheeseBurg";
+
+  int rowSums[3];
 
   printf("The size of int is %d\n",    sizeof(int));     //  4
   printf("The size of float is %d\n",  sizeof(float));   //  4 
@@ -42,7 +45,28 @@ int main() {
   printf("The #elements in array2D is %d \n", sizeof(array2D)/sizeof(int));
   printf("The #elements in each row of array2D is %d \n", sizeof(array2D[0])/sizeof(int));
   printf("The #rows of array2D is %d \n", sizeof(array2D)/sizeof(array2D[0]));
+
+  //getting sum of arrays in array2D
+  int sum =0;
+  //looping through the number of rows
+  for(int i=0; i< sizeof(array2D)/ sizeof(array2D[0]); i++){
+    
+    //looping through each interior array
+    for(int j=0; j<sizeof(array2D[i])/sizeof(array2D[i][0]); j++){
+      sum += array2D[i][j];
+    }
+    
+    rowSums[i] = sum;
+    sum =0;
+  }
+
+  //printing out rowSums content
+  for(int i=0; i< sizeof(rowSums)/sizeof(rowSums[0]) ; i++){
+    printf("the #%d row has a sum of %d\n", i+1, rowSums[i]);
+  }
   
+  printf("\n");
+
   for (int i=0; i<3; i++) {
     for (int j=0; j<4; j++)
       printf("%02d ", array2D[i][j]);
