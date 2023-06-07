@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 void output(unsigned char c){
-    printf("Character format: %c\n", c + 32);
+    printf("Character format: %c\n", c + 65);
     printf("Decimal format: %u\n", c);
     printf("Binary format: ");
     
