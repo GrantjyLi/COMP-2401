@@ -1,12 +1,17 @@
 #include<stdio.h>
 
-void output(unsigned char c){
-    printf("Character format: %c\n", c + 65);
-    printf("Decimal format: %u\n", c);
+//function to format output
+void output(unsigned char ACD){
+    //printing in character and decimal format
+    //an ascii value of 'A' is the starting character representation of the ACD
+    printf("Character format: %c\n", ACD + 65);
+    printf("Decimal format: %u\n", ACD);
+
+    //using a for loop and a bit mask to print the bits of the ACD character
     printf("Binary format: ");
     
-    for(int i= 0; i < 3 ; i++){
-        printf("%d", (c & (1 << (2 - i))) >> (2 - i));
+    for(int i= 0; i < 8 ; i++){
+        printf("%d", (ACD & (1 << (7 - i))) >> (7 - i));
     }
     
 }
