@@ -1,4 +1,8 @@
 #include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+char template[] = "|T000000001,C0000001,0000000.00";
 
 //structure for every transaction
 struct transaction{
@@ -8,20 +12,11 @@ struct transaction{
 };
 
 int main(){
+    char * input = NULL;
     struct transaction t1;
 
-    printf("enter transaction Id: ");
-    scanf("%s", &t1.tId);
-        
-    printf("enter customer Id: ");
-    scanf("%s", &t1.cId);
+    printf("Enter your transactions input: ");
+    scanf("%ms", &input);
 
-
-    printf("Transaction Id: %s\n", t1.tId);
-
-    printf("enter transaction amount: ");
-    scanf(" %f", &t1.amount);
-
-    printf("Customer Id: %s\n", t1.cId);
-    printf("Transaction amount: %0.2f\n", t1.amount);
+    printf("%s asdawd", input);
 }
