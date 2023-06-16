@@ -19,7 +19,24 @@ struct emp{
 // forward declaration
 
 void populateEmployee(struct emp *emp);
-void cmpEmployee(struct emp *emp, char *familyName);
+int cmpEmployee(struct emp *emp, char *familyName);
+
+int cmpEmployee(struct emp *p, char *familyName){
+	
+	return !strcmp(p->familyName, familyName);
+}
+
+struct emp * findEmployee(struct emp **arr, int arraySize, char*familyName){
+
+	for (int i = 0; i < arraySize; i++){
+//		printf("%s, %s", *arr[i]->firstName, *arr[i]->familyName);
+		if(cmpEmployee(arr[i], familyName) == 1){
+			return arr[i];
+		}
+	}
+	return NULL;
+	
+}
 
 int main(int argc, char* argv[])
 {
@@ -41,14 +58,23 @@ int main(int argc, char* argv[])
 	// initialize each of the elements to NULL.  
 	// ADD CODE
 
+	for(i =0; i< MAX_EMPLOYEES; i++){
+		empArr[i] = NULL;
+	}
+
 
 	// create an employee element by allocating new memory 
 	// for each employee using malloc() and populate that element
 	for (i = 0; i < MAX_EMPLOYEES; i++) {
-		// ADD CODE
-
-
+		empArr[i] = (struct emp *)malloc(sizeof(struct emp));
+		if(empArr[i] == NULL){
+			printf("Couldn't initialize employees in memory.\n");
+			return 1;
+		}
+		
+		populateEmployee(empArr[i]);
 	}
+
 
 	// print the family name
 	for (i = 0; i < MAX_EMPLOYEES; i++) printf("%s\n", empArr[i]->familyName);
@@ -57,18 +83,28 @@ int main(int argc, char* argv[])
 
 	// if found print the record
 
+	struct emp * employee;
+
+	employee = findEmployee(empArr, MAX_EMPLOYEES, "Carp");
+	if(employee != NULL){
+		printf("%s %s\n",employee->firstName, employee->familyName);
+		printf("salary= %.2f years of service = %.2f", employee->salary, employee->yearsWithCompany);
+			
+	}
+	
 	// add code to search for employee against the family name "King"
 
 	// if found print the record
 
+	employee = findEmployee(empArr, MAX_EMPLOYEES, "King");
+	if(employee != NULL){
+		printf("%s %s\n",employee->firstName, employee->familyName);
+		printf("salary= %.2f years of service = %.2f", employee->salary, employee->yearsWithCompany);
+	}
 
+	free(empArr);
     return 0;
 }
-
-
-
-
-
 /**************************************************************/
 /* Purpose: compare the employee record with respect to family name
 
@@ -83,19 +119,6 @@ Return
 0 if the family name in the employee record does not match that of the given key
 1 if the family name in the employee record matches that of the given key
 */
-
-void cmpEmployee(struct emp *emp, char *familyName)
-
-{
-
-	// add code
-	// use the -> opertor to access the fields
-	// recall the precedence order between "*" and "->" operators
-
-
-}
-
-
 
 /**************************************************************/
 /* populate an employee passed in by reference
