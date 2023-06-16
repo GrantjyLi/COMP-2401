@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
-        "bit_functions.h": "c"
+        "bit_functions.h": "c",
+        "stdio.h": "c"
     }
 }

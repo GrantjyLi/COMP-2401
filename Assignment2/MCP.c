@@ -2,21 +2,37 @@
 #include<string.h>
 #include<stdlib.h>
 
-char template[] = "|T000000001,C0000001,0000000.00";
 
 //structure for every transaction
-struct transaction{
+typedef struct transaction{
     char tId[10];
     char cId[8];
     float amount;
-};
+} transaction;
+
+void getData(transaction *list, char * input, int num){
+    for(int i=0; i<num; i++){
+      
+    }
+}
 
 int main(){
+
+    char template[] = "|T000000001,C0000001,0000000.00";
+    int tempSize = strlen(template);
+
     char * input = NULL;
-    struct transaction t1;
 
     printf("Enter your transactions input: ");
     scanf("%ms", &input);
 
-    printf("%s asdawd", input);
+    int num = strlen(input)/tempSize;
+
+    transaction *transactionList = malloc(sizeof(transaction) * num);
+
+    getData(transactionList, input, num);
+
+    free(transactionList);
+
+
 }
