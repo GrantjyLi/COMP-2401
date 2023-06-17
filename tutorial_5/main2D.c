@@ -36,9 +36,11 @@ int main(int argc, char **argv)
     // allocate memory for the arrray of pointers to int array
     // the array has to have DIM_1 elements where each element is an int *
     // add code
-    //
+    int size = DIM_1;
     arr = (int **) malloc(sizeof(int *) * DIM_1);
-
+    if(arr == NULL){
+        return 1;
+    }
 
     // initialize the pointers to NULL
     for (i = 0; i < DIM_1; i++) arr[i] = NULL;
@@ -48,8 +50,9 @@ int main(int argc, char **argv)
     // each element should contains the address of a 1D array of DIM_2 elements each of type int 
     for (i = 0; i < DIM_1; i++) {
         arr[i]= (int *) malloc(sizeof(int) * DIM_2);
-			// allocate memory for arr[i]
-			// check if the memory was allocated
+		if(arr[i] == NULL){
+            return 1;
+        }
     }
 
     
@@ -62,9 +65,28 @@ int main(int argc, char **argv)
    
     // add code 
 
+
+
+    for(i=0; i<DIM_1; i++){
+        for (j = 0; j < DIM_2; j++){
+            arr[i][j] = count;
+            count++;
+        }   
+    }
+
+    for(i=0; i<DIM_1; i++){
+        for (j = 0; j < DIM_2; j++){
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
     // print the array  (using 2 for loops)
     //  Add code
-    
+
+    for(i=0; i<DIM_1; i++){
+        free(arr[i]);
+    }
+    free(arr);
     return(0);
 }
 

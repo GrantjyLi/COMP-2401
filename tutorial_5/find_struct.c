@@ -102,6 +102,7 @@ int main(int argc, char* argv[])
 		printf("salary= %.2f years of service = %.2f", employee->salary, employee->yearsWithCompany);
 	}
 
+	for (i = 0; i < MAX_EMPLOYEES; i++) free(empArr[i]);
 	free(empArr);
     return 0;
 }
