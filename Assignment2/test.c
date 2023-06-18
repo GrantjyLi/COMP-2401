@@ -2,16 +2,19 @@
 #include<string.h>
 #include<stdlib.h>
 
-int main(){
-    char arr[5];
-    printf("enter: ");
-    scanf("%s", &arr);
+int glob;
 
-    int i=0;
-    while(arr[i] != '\n'){
-        printf("%c\n", arr[i]);
-        i++;
-    }
+void change(){
+    glob = 3;
+}
+
+int main(){
+    glob = 2;
+    printf("%d\n", glob);
+
+    change();
+    printf("%d\n", glob);
+
     
 
     return 0;

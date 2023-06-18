@@ -2,6 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 
+int numTransactions =0;
 
 //structure for every transaction
 typedef struct transaction{
@@ -17,52 +18,59 @@ transaction * getData(int tempSize){
     scanf("%ms", &input);
     
     transaction *transactionList = malloc(sizeof(transaction) * (strlen(input)/tempSize));
-    printf("%d\n", sizeof(*transactionList));
     
-    int currTransaction = -1, infoCounter=0;
+    int infoCounter=0;
     char status;
     char info[10];
+
+    numTransactions =-1;
+
     for(int i=0; i< strlen(input); i++){
         if(input[i] == '|'){
             status = 'T';
-            currTransaction++;
+            numTransactions++;
             
             infoCounter=0;
 
             if(i > 0){
-                transactionList[currTransaction].amount = atof(info);
+                printf("%s\n", info);
+                transactionList[numTransactions].amount = atof(info);
             }
             
             continue;
         }else if(input[i] == ',' && status == 'T'){
             status = 'C';
             infoCounter=0;
-
-            strcpy(transactionList[currTransaction].tId, info);
+            
+            printf("%s\n", info);
+            strcpy(transactionList[numTransactions].tId, info);
 
             continue;
         }else if(input[i] == ',' && status == 'C'){
             status = 'A';
             infoCounter=0;
 
-            strcpy(transactionList[currTransaction].cId, info);
+            printf("%s\n", info);
+            strcpy(transactionList[numTransactions].cId, info);
 
             continue;
         }
 
         info[infoCounter] = input[i];
+        infoCounter++;
         
     }
     
     if(status != 0){
-        transactionList[currTransaction].amount = atof(info);
+        
+        printf("%s\n", info);
+        transactionList[numTransactions].amount = atof(info);
     }
-    printf("%d %d", sizeof(*transactionList), sizeof(transaction) * (strlen(input)/tempSize));
     return transactionList;
 }
 
 void printData(transaction * transactionList){
-    for(int i=0; i< sizeof(transactionList)/sizeof(transaction); i++){
+    for(int i=0; i<= numTransactions; i++){
         printf("Transaction Id: %s\n", transactionList[i].tId);
         printf("Customer Id: %s\n", transactionList[i].cId);
         printf("Transaction amount: %.2f\n", transactionList[i].amount);
@@ -77,10 +85,6 @@ int main(){
     transaction * transactionList = getData(tempSize);
 
     printData(transactionList);
-
-    for(int i=0; i< sizeof(transactionList)/sizeof(transaction); i++){
-        free(&transactionList[i]);
-    }
 
     free(transactionList);
     return 0;
