@@ -2,8 +2,6 @@
 #include<string.h>
 #include<stdlib.h>
 
-int numTransactions = 0; // number of transactions
-
 typedef struct transaction{//structure for every transaction
     char tId[11];
     char cId[9];
@@ -11,26 +9,28 @@ typedef struct transaction{//structure for every transaction
 } transaction;
 
 //getData method returns a pointer to a transaction list
-transaction * getData(int tempSize){
-    //char pointer to get input from user
+void getData(int tempSize){
+    //char pointer to get input from user and int for number of transactions
     char * input;
 
     //getting the transaction input
     printf("Enter your transactions input: ");
-    scanf("%[^\n]ms", &input);
+    scanf("%m[^\n]", &input);
 
-    if(strlen(input) < 10 || input == NULL){ //checking for invalid input
-        printf("No input given");
-        return;
+    if(input == NULL){ //checking for invalid input
+        printf("No input given, program ending");
+        free(input);
+        return 0;
     }
 
     //mallocing memory for the transaction struct array with the size of the number of transactions
-    transaction *transactionList = malloc(sizeof(transaction) * (strlen(input)/tempSize));
+    transaction * transactionList = malloc(sizeof(transaction) * (strlen(input)/tempSize));
 
     //variables used to copy parts of the transaction input into a struct
     int infoIndex=0;
     char status;
     char info[11];
+    int numTransactions = 0;
 
     //looping through the input string one letter at a tme
     for(int i=0; i< strlen(input); i++){
@@ -76,37 +76,39 @@ transaction * getData(int tempSize){
         transactionList[numTransactions-1].amount = atof(info);
     }
 
+    //printing data and freeing the transaction list memory
+    printData(transactionList, numTransactions);
     //freeing the input space and returning the array pointer
     free(input);
-    return transactionList;
+    free(transactionList);
 }
 
 //method to print the tranaction
-void printData(transaction * transactionList){
+void printData(transaction * transactionList, int numTransactions){
+    float total = 0; //to track the total transaction list amount
+
     //looping for the number of transactions and printing each one using a format
     for(int i=0; i < numTransactions; i++){
         printf("---------------------------------\n");
         printf("Transaction Id: %s\n", transactionList[i].tId);
         printf("Customer Id: %s\n", transactionList[i].cId);
         printf("Transaction amount: $%.2f\n", transactionList[i].amount);
+        total += transactionList[i].amount;
     }
+
+    //printing average and total transaction information
+    printf("**********************************\n");
+    printf("Average transaction amount is: $%.2f\n", total/numTransactions);
+    printf("Total transaction number is: %d\n", numTransactions);
+    printf("**********************************\n");
 }
 
 int main(){
     //template input for reference
     char template[] = "|T123456789,C1234567,1234567.89";
 
-    //getting pointer to array of transaction structs with the template size
-    transaction * transactionList = getData(strlen(template));
-
-    if(numTransactions == 0){//handling no invalid/no input
-        free(transactionList);
-        return 0;
-    }
-
-    //printing data and freeing the transaction list memory
-    printData(transactionList);
-    free(transactionList);
+    //getData handles the rest of the input and calls output
+    getData(strlen(template));
     
     return 0;
 }
