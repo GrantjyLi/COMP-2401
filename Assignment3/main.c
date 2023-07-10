@@ -1,33 +1,68 @@
 #include <stdio.h>
-#include<string.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
-int main(){
-    char *input;
+typedef struct{
+    int number;
+    char *name;
+    char *type1;
+    char *type2;
+    int total;
+    int hp;
+    int attack;
+    int defence;
+    int specialDefence;
+    int speed;
+    char generation;
+    char legendary;
+} Pokemon;
 
-    printf("Enter file name for Pokemon information (include file prefix): ");
-    scanf("%m[^\n]", &input);
+void menu(FILE *fp){
+    printf("Enter the number of the option you want:\n");
+    printf("1. Type search\n");
+    printf("2. Save results\n");
+    printf("3. Exit the program\n");
 
-    int counter =0;
-    while(input[counter] != '\n'){
-        printf("%c\n",input[counter]);
-        counter++;
-        if(counter > 10) return;
+    int choice;
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+    case 1:
+        /* code */
+        break;
+    case 2:
+
+        break;
+    default:
+        return;
     }
 
-    // FILE *fp = fopen("./%m", *input);
+}
 
-    // while (fp ==NULL){
-    //     printf("file couldn't be found, please enter again or 'n' to close: ");
-    //     scanf("%m[^\n]", &input);
-        
-    //     if(*input == 'n'){
-    //         printf("Ending Program.");
-    //         return(0);
-    //     }
-    //     fp = fopen("./%s", *input);
-    // }
-    // printf("%m", *input);
-    // fclose(fp);
-    // free(input);
+int main(){
+    // char *input;
+
+    // printf("Enter file name for Pokemon information (include file prefix): ");
+    // scanf("%m[^\n]", &input);
+
+    char input[] = "./pokemon.csv";
+    
+    FILE *fp = fopen(input, "r");
+
+    while(fp == NULL){
+        printf("File not found, enter 'n' to exit or file name again: ");
+        scanf(" %s", &input);
+
+        if(input[0] =='n'){
+            printf("Program exiting...");
+            return 0;
+        }
+
+        fp = fopen(input, "r");
+    }
+
+    menu(fp);
+
+    fclose(fp);
+    //free(input);
 }
