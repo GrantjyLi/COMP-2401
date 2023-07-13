@@ -18,7 +18,12 @@ typedef struct{
     char legendary;
 } Pokemon;
 
-void save(Pokemon *pokeDeck, FILE *saveFile, int size){
+void save(Pokemon *pokeDeck, int size){
+    char * fname;
+    printf("Enter your save file name: ");
+    scanf("%m[^\n]", &fname);
+
+    FILE *saveFile = fopen(fname, "a");
 
     for (int i = 0; i < size; i++){
         fprintf(saveFile, "Pokemon number: %d", pokeDeck[i].number);
@@ -42,6 +47,8 @@ void save(Pokemon *pokeDeck, FILE *saveFile, int size){
         fprintf(saveFile, "\n");
     }
 
+    fclose(saveFile);
+    free(fname);
 }
 
 int main(){
@@ -82,9 +89,6 @@ int main(){
     pokeDeck[0] = bulbasaur;
     pokeDeck[1] = charmander;
 
-    FILE *saveFile = fopen("Pokedeck.txt", "w");
-
-    save(pokeDeck, saveFile, 2);
+    save(pokeDeck, 2);
     free(pokeDeck);
-    fclose(saveFile);
 }
