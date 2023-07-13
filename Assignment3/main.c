@@ -18,10 +18,13 @@ typedef struct{
     char legendary;
 } Pokemon;
 
-void getPokemon(Pokemon *pokeDeck){
+void getPokemon(Pokemon *pokeDeck, int deckSize){
     char *input;
     printf("Enter the name of your chosen pokemon: ");
     scanf("%m[^\n]", &input);
+
+    //if found:
+    realloc(pokeDeck, deckSize * sizeof(Pokemon));
 
 
     free(input);
@@ -48,8 +51,7 @@ int menu(FILE *fp, Pokemon *pokeDeck){
         switch (choice){
             case 1:
                 deckSize++;
-                realloc(pokeDeck, deckSize * sizeof(Pokemon));
-                getPokemon(pokeDeck);
+                getPokemon(pokeDeck, deckSize);
                 break;
             case 2:
                 savePokemon(pokeDeck);
