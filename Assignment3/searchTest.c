@@ -24,22 +24,37 @@ void getPokemon(Pokemon *pokeDeck, int deckSize){
     scanf("%m[^\n]", &input);
 
     int read;
-    int pokeNum;
-    char pokeName[15];
-    FILE *file = fopen("pokemon.csv", 'r'); 
-
+    FILE *file = fopen("pokemon.csv", "r"); 
+    
+    Pokemon temp; 
+    fscanf(file, "%*[^\n]\n");
     while(!feof(file)){
-        read = fscanf(file, "%d,%15[^,]", &pokeNum, &pokeName);
-        printf("%d\n", pokeNum);
-        if(strcmp(pokeName, input)){
+        read = fscanf(file, "%d,%15[^,],%10[^,],%10[^,],%d,%d,%d,%d,%d,%d,%d,%c,%c%*c", 
+                &temp.number, 
+                temp.name,
+                temp.type1,
+                temp.type2,
+                &temp.total,
+                &temp.hp,
+                &temp.attack,
+                &temp.defence,
+                &temp.specialAttack,
+                &temp.specialDefence,
+                &temp.speed,
+                &temp.generation,
+                &temp.legendary);
+                
+        if(strcmp(temp.type1, input) ==0){
             realloc(pokeDeck, deckSize * sizeof(Pokemon));
-            printf("Pokemon found\n");
-
-            char type1[10];
-            read = fscanf(file, "%d,", &type1);
-            printf("type is: %s\n", type1);
+            pokeDeck[deckSize-1] = temp;
+            deckSize++;
+            printf("%s\n", temp.name);
+            printf("%d ", temp.number);
+            printf("%d ", temp.speed);
+            break;
         }
-        
+        fscanf(file, "%*[^\n]\n");
+       
     }
 
     fclose(file);
