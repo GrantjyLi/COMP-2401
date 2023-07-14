@@ -4,7 +4,7 @@
 
 typedef struct{
     int number;
-    char name[15];
+    char name[25];
     char type1[10];
     char type2[10];
     int total;
@@ -18,58 +18,59 @@ typedef struct{
     char legendary;
 } Pokemon;
 
-void getPokemon(Pokemon *pokeDeck, int deckSize){
+int getPokemon(Pokemon **pokeDeck, int deckSize) {
     char *input;
     printf("Enter the name of your chosen pokemon: ");
-    scanf("%m[^\n]", &input);
+    scanf(" %m[^\n]%*c", &input);
 
-    int read;
-    FILE *file = fopen("pokemon.csv", "r"); 
-    
-    Pokemon temp; 
-    fscanf(file, "%*[^\n]\n");
-    while(!feof(file)){
-        read = fscanf(file, "%d,%15[^,],%10[^,],%10[^,],%d,%d,%d,%d,%d,%d,%d,%c,%c%*c", 
-                &temp.number, 
-                temp.name,
-                temp.type1,
-                temp.type2,
-                &temp.total,
-                &temp.hp,
-                &temp.attack,
-                &temp.defence,
-                &temp.specialAttack,
-                &temp.specialDefence,
-                &temp.speed,
-                &temp.generation,
-                &temp.legendary);
-                
-        if(strcmp(temp.type1, input) ==0){
-            realloc(pokeDeck, deckSize * sizeof(Pokemon));
-            pokeDeck[deckSize-1] = temp;
+    FILE *file = fopen("pokemon.csv", "r");
+    if (file == NULL) {
+        printf("Error opening the file.\n");
+        free(input);
+        fclose(file);
+        return deckSize;
+    }
+
+    Pokemon temp;
+    char line[100];
+    fgets(line, sizeof(line), file);
+    while (fgets(line, sizeof(line), file) != NULL){
+        
+        sscanf(line, "%d,%[^,],%[^,],%[^,],%d,%d,%d,%d,%d,%d,%d,%c,%c\n",
+                  &temp.number,
+                  temp.name,
+                  temp.type1,
+                  temp.type2,
+                  &temp.total,
+                  &temp.hp,
+                  &temp.attack,
+                  &temp.defence,
+                  &temp.specialAttack,
+                  &temp.specialDefence,
+                  &temp.speed,
+                  &temp.generation,
+                  &temp.legendary);
+
+        if (strcmp(temp.type1, input) == 0) {
             deckSize++;
-            printf("%s\n", temp.name);
-            printf("%d ", temp.number);
-            printf("%d ", temp.speed);
-            break;
+            *pokeDeck = realloc(*pokeDeck, deckSize * sizeof(Pokemon));
+            
+            memcpy(&((*pokeDeck)[deckSize - 1]), &temp, sizeof(Pokemon));
         }
-        fscanf(file, "%*[^\n]\n");
-       
     }
 
     fclose(file);
     free(input);
+    return deckSize;
 }
 
+
 int main(){
-    Pokemon *pokeDeck = (Pokemon*)malloc(sizeof(Pokemon));
+    Pokemon *pokeDeck = (Pokemon*)malloc(0);
 
-    getPokemon(pokeDeck, 1);
+    int decksize = getPokemon(&pokeDeck, 0);
 
-    for(int i=0; i<1; i++){
-        printf("%s + ", pokeDeck[0].name);
-        printf("%d\n", pokeDeck[0].speed);
-    }
+    printf("%d", decksize);
 
     free(pokeDeck);
 }

@@ -4,9 +4,9 @@
 
 typedef struct{
     int number;
-    char *name;
-    char *type1;
-    char *type2;
+    char name[25];
+    char type1[10];
+    char type2[10];
     int total;
     int hp;
     int attack;
@@ -56,9 +56,9 @@ int main(){
 
     Pokemon bulbasaur;
     bulbasaur.number = 1;
-    bulbasaur.name = "bulbasaur";
-    bulbasaur.type1 = "Grass";
-    bulbasaur.type2 = "Poison";
+    strcpy(bulbasaur.name, "bulbasaur");
+    strcpy(bulbasaur.type1, "Grass");
+    strcpy(bulbasaur.type2, "Poison");
     bulbasaur.total = 318;
     bulbasaur.hp = 45;
     bulbasaur.attack = 49;
@@ -71,9 +71,9 @@ int main(){
 
     Pokemon charmander;
     charmander.number = 4;
-    charmander.name = "charmander";
-    charmander.type1 = "Fire";
-    charmander.type2 = "";
+    strcpy(charmander.name, "charmander");
+    strcpy(charmander.type1, "Fire");
+    strcpy(charmander.type2, "");
     charmander.total= 309;
     charmander.hp = 39;
     charmander.attack = 52;
