@@ -4,7 +4,7 @@
 
 typedef struct{
     int number;
-    char name[25];
+    char name[30];
     char type1[10];
     char type2[10];
     int total;
@@ -18,25 +18,18 @@ typedef struct{
     char legendary;
 } Pokemon;
 
-int getPokemon(Pokemon **pokeDeck, int deckSize) {
+int getPokemon(FILE *file, Pokemon **pokeDeck, int deckSize) {
     char *input;
     printf("\nEnter Pokemon type: ");
     scanf(" %m[^\n]", &input);
-
-    FILE *file = fopen("pokemon.csv", "r");
-    if (file == NULL) {
-        printf("Error opening the file.\n");
-        free(input);
-        fclose(file);
-        return deckSize;
-    }
 
     Pokemon temp;
     char line[100];
     fgets(line, sizeof(line), file);
     while (fgets(line, sizeof(line), file) != NULL){
+        
         temp.type2[0] = '\0';
-        sscanf(line, "%d,%25[^,],%10[^,],%10[^,],%d,%d,%d,%d,%d,%d,%d,%c,%c\n",
+        sscanf(line, "%d,%[^,],%[^,],%[^,],%d,%d,%d,%d,%d,%d,%d,%c,%c\n",
                   &temp.number,
                   temp.name,
                   temp.type1,
@@ -50,23 +43,20 @@ int getPokemon(Pokemon **pokeDeck, int deckSize) {
                   &temp.speed,
                   &temp.generation,
                   &temp.legendary);
-                  
+
         if (strcmp(temp.type1, input) == 0) {
             deckSize++;
-            *pokeDeck = realloc(*pokeDeck, deckSize * sizeof(Pokemon));
-            
+            *pokeDeck = realloc(*pokeDeck, deckSize * sizeof(Pokemon)); 
             memcpy(&((*pokeDeck)[deckSize - 1]), &temp, sizeof(Pokemon));
         }
     }
-
-    fclose(file);
     free(input);
     return deckSize;
 }
 
 void savePokemon(Pokemon *pokeDeck, int size){
     char *fname;
-    printf("Enter your save file name: ");
+    printf("\nEnter your save file name (new file name only): ");
     scanf(" %m[^\n]", &fname);
 
     FILE *saveFile = fopen(fname, "a");
@@ -96,7 +86,7 @@ void savePokemon(Pokemon *pokeDeck, int size){
     free(fname);
 }
 
-int menu(FILE *fp, Pokemon *pokeDeck){
+void menu(FILE *fp, Pokemon *pokeDeck){
     int deckSize = 0;
 
     do{
@@ -111,23 +101,21 @@ int menu(FILE *fp, Pokemon *pokeDeck){
 
         switch (choice){
             case 1:
-                deckSize = getPokemon(&pokeDeck, deckSize);
+                deckSize = getPokemon(fp, &pokeDeck, deckSize);
                 break;
             case 2:
                 savePokemon(pokeDeck, deckSize);
                 break;
             default:
-                return 1;
+                return;
         }
     }while(1);
-
-    return 0;
 }
 
 int main(){
     char *input;
 
-    printf("please include file prefix. i.e: \"test.txt\"\n");
+    printf("Include file prefix. i.e: \"test.txt\"\n");
     printf("Enter destination file name: ");
     scanf("%m[^\n]", &input);
 

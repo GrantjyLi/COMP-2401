@@ -4,7 +4,7 @@
 
 typedef struct{
     int number;
-    char name[25];
+    char name[30];
     char type1[10];
     char type2[10];
     int total;

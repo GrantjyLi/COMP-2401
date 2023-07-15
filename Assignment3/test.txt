@@ -1,0 +1,980 @@
+Pokemon number: 1
+Pokemon name: Bulbasaur
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 318
+Pokemon hp: 45
+Pokemon attack: 49
+Pokemon defence: 49
+Pokemon Special Attack: 65
+Pokemon Special Defence: 65
+Pokemon speed: 45
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 2
+Pokemon name: Ivysaur
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 405
+Pokemon hp: 60
+Pokemon attack: 62
+Pokemon defence: 63
+Pokemon Special Attack: 80
+Pokemon Special Defence: 80
+Pokemon speed: 60
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 3
+Pokemon name: Venusaur
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 525
+Pokemon hp: 80
+Pokemon attack: 82
+Pokemon defence: 83
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 80
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 3
+Pokemon name: VenusaurMega Venusaur
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 625
+Pokemon hp: 80
+Pokemon attack: 100
+Pokemon defence: 123
+Pokemon Special Attack: 122
+Pokemon Special Defence: 120
+Pokemon speed: 80
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 43
+Pokemon name: Oddish
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 320
+Pokemon hp: 45
+Pokemon attack: 50
+Pokemon defence: 55
+Pokemon Special Attack: 75
+Pokemon Special Defence: 65
+Pokemon speed: 30
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 44
+Pokemon name: Gloom
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 395
+Pokemon hp: 60
+Pokemon attack: 65
+Pokemon defence: 70
+Pokemon Special Attack: 85
+Pokemon Special Defence: 75
+Pokemon speed: 40
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 45
+Pokemon name: Vileplume
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 490
+Pokemon hp: 75
+Pokemon attack: 80
+Pokemon defence: 85
+Pokemon Special Attack: 110
+Pokemon Special Defence: 90
+Pokemon speed: 50
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 69
+Pokemon name: Bellsprout
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 300
+Pokemon hp: 50
+Pokemon attack: 75
+Pokemon defence: 35
+Pokemon Special Attack: 70
+Pokemon Special Defence: 30
+Pokemon speed: 40
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 70
+Pokemon name: Weepinbell
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 390
+Pokemon hp: 65
+Pokemon attack: 90
+Pokemon defence: 50
+Pokemon Special Attack: 85
+Pokemon Special Defence: 45
+Pokemon speed: 55
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 71
+Pokemon name: Victreebel
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 490
+Pokemon hp: 80
+Pokemon attack: 105
+Pokemon defence: 65
+Pokemon Special Attack: 100
+Pokemon Special Defence: 70
+Pokemon speed: 70
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 102
+Pokemon name: Exeggcute
+Pokemon type1: Grass
+Pokemon type2: Psychic
+Pokemon total: 325
+Pokemon hp: 60
+Pokemon attack: 40
+Pokemon defence: 80
+Pokemon Special Attack: 60
+Pokemon Special Defence: 45
+Pokemon speed: 40
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 103
+Pokemon name: Exeggutor
+Pokemon type1: Grass
+Pokemon type2: Psychic
+Pokemon total: 520
+Pokemon hp: 95
+Pokemon attack: 95
+Pokemon defence: 85
+Pokemon Special Attack: 125
+Pokemon Special Defence: 65
+Pokemon speed: 55
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 114
+Pokemon name: Tangela
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 485
+Pokemon hp: 105
+Pokemon attack: 130
+Pokemon defence: 120
+Pokemon Special Attack: 45
+Pokemon Special Defence: 45
+Pokemon speed: 40
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 152
+Pokemon name: Chikorita
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 780
+Pokemon hp: 106
+Pokemon attack: 190
+Pokemon defence: 100
+Pokemon Special Attack: 154
+Pokemon Special Defence: 100
+Pokemon speed: 130
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 153
+Pokemon name: Bayleef
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 780
+Pokemon hp: 106
+Pokemon attack: 190
+Pokemon defence: 100
+Pokemon Special Attack: 154
+Pokemon Special Defence: 100
+Pokemon speed: 130
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 154
+Pokemon name: Meganium
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 780
+Pokemon hp: 106
+Pokemon attack: 190
+Pokemon defence: 100
+Pokemon Special Attack: 154
+Pokemon Special Defence: 100
+Pokemon speed: 130
+Pokemon generation: 49
+Pokemon legenday status: Yes
+
+Pokemon number: 182
+Pokemon name: Bellossom
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 610
+Pokemon hp: 90
+Pokemon attack: 95
+Pokemon defence: 105
+Pokemon Special Attack: 165
+Pokemon Special Defence: 110
+Pokemon speed: 45
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 187
+Pokemon name: Hoppip
+Pokemon type1: Grass
+Pokemon type2: Flying
+Pokemon total: 250
+Pokemon hp: 35
+Pokemon attack: 35
+Pokemon defence: 40
+Pokemon Special Attack: 35
+Pokemon Special Defence: 55
+Pokemon speed: 50
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 188
+Pokemon name: Skiploom
+Pokemon type1: Grass
+Pokemon type2: Flying
+Pokemon total: 340
+Pokemon hp: 55
+Pokemon attack: 45
+Pokemon defence: 50
+Pokemon Special Attack: 45
+Pokemon Special Defence: 65
+Pokemon speed: 80
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 189
+Pokemon name: Jumpluff
+Pokemon type1: Grass
+Pokemon type2: Flying
+Pokemon total: 460
+Pokemon hp: 75
+Pokemon attack: 55
+Pokemon defence: 70
+Pokemon Special Attack: 55
+Pokemon Special Defence: 95
+Pokemon speed: 110
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 191
+Pokemon name: Sunkern
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 460
+Pokemon hp: 75
+Pokemon attack: 55
+Pokemon defence: 70
+Pokemon Special Attack: 55
+Pokemon Special Defence: 95
+Pokemon speed: 110
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 192
+Pokemon name: Sunflora
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 460
+Pokemon hp: 75
+Pokemon attack: 55
+Pokemon defence: 70
+Pokemon Special Attack: 55
+Pokemon Special Defence: 95
+Pokemon speed: 110
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 252
+Pokemon name: Treecko
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 253
+Pokemon name: Grovyle
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 254
+Pokemon name: Sceptile
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 50
+Pokemon legenday status: Yes
+
+Pokemon number: 254
+Pokemon name: SceptileMega Sceptile
+Pokemon type1: Grass
+Pokemon type2: Dragon
+Pokemon total: 630
+Pokemon hp: 70
+Pokemon attack: 110
+Pokemon defence: 75
+Pokemon Special Attack: 145
+Pokemon Special Defence: 85
+Pokemon speed: 145
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 273
+Pokemon name: Seedot
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 480
+Pokemon hp: 80
+Pokemon attack: 70
+Pokemon defence: 70
+Pokemon Special Attack: 90
+Pokemon Special Defence: 100
+Pokemon speed: 70
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 274
+Pokemon name: Nuzleaf
+Pokemon type1: Grass
+Pokemon type2: Dark
+Pokemon total: 340
+Pokemon hp: 70
+Pokemon attack: 70
+Pokemon defence: 40
+Pokemon Special Attack: 60
+Pokemon Special Defence: 40
+Pokemon speed: 60
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 275
+Pokemon name: Shiftry
+Pokemon type1: Grass
+Pokemon type2: Dark
+Pokemon total: 480
+Pokemon hp: 90
+Pokemon attack: 100
+Pokemon defence: 60
+Pokemon Special Attack: 90
+Pokemon Special Defence: 60
+Pokemon speed: 80
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 285
+Pokemon name: Shroomish
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 414
+Pokemon hp: 70
+Pokemon attack: 60
+Pokemon defence: 62
+Pokemon Special Attack: 80
+Pokemon Special Defence: 82
+Pokemon speed: 60
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 286
+Pokemon name: Breloom
+Pokemon type1: Grass
+Pokemon type2: Fighting
+Pokemon total: 460
+Pokemon hp: 60
+Pokemon attack: 130
+Pokemon defence: 80
+Pokemon Special Attack: 60
+Pokemon Special Defence: 60
+Pokemon speed: 70
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 315
+Pokemon name: Roselia
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 400
+Pokemon hp: 50
+Pokemon attack: 60
+Pokemon defence: 45
+Pokemon Special Attack: 100
+Pokemon Special Defence: 80
+Pokemon speed: 65
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 331
+Pokemon name: Cacnea
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 520
+Pokemon hp: 80
+Pokemon attack: 100
+Pokemon defence: 80
+Pokemon Special Attack: 80
+Pokemon Special Defence: 80
+Pokemon speed: 100
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 332
+Pokemon name: Cacturne
+Pokemon type1: Grass
+Pokemon type2: Dark
+Pokemon total: 475
+Pokemon hp: 70
+Pokemon attack: 115
+Pokemon defence: 60
+Pokemon Special Attack: 115
+Pokemon Special Defence: 60
+Pokemon speed: 55
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 357
+Pokemon name: Tropius
+Pokemon type1: Grass
+Pokemon type2: Flying
+Pokemon total: 460
+Pokemon hp: 99
+Pokemon attack: 68
+Pokemon defence: 83
+Pokemon Special Attack: 72
+Pokemon Special Defence: 87
+Pokemon speed: 51
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 387
+Pokemon name: Turtwig
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 388
+Pokemon name: Grotle
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 51
+Pokemon legenday status: Yes
+
+Pokemon number: 389
+Pokemon name: Torterra
+Pokemon type1: Grass
+Pokemon type2: Ground
+Pokemon total: 525
+Pokemon hp: 95
+Pokemon attack: 109
+Pokemon defence: 105
+Pokemon Special Attack: 75
+Pokemon Special Defence: 85
+Pokemon speed: 56
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 406
+Pokemon name: Budew
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 280
+Pokemon hp: 40
+Pokemon attack: 30
+Pokemon defence: 35
+Pokemon Special Attack: 50
+Pokemon Special Defence: 70
+Pokemon speed: 55
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 407
+Pokemon name: Roserade
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 515
+Pokemon hp: 60
+Pokemon attack: 70
+Pokemon defence: 65
+Pokemon Special Attack: 125
+Pokemon Special Defence: 105
+Pokemon speed: 90
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 420
+Pokemon name: Cherubi
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 474
+Pokemon hp: 70
+Pokemon attack: 80
+Pokemon defence: 102
+Pokemon Special Attack: 80
+Pokemon Special Defence: 102
+Pokemon speed: 40
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 421
+Pokemon name: Cherrim
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 474
+Pokemon hp: 70
+Pokemon attack: 80
+Pokemon defence: 102
+Pokemon Special Attack: 80
+Pokemon Special Defence: 102
+Pokemon speed: 40
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 455
+Pokemon name: Carnivine
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 490
+Pokemon hp: 83
+Pokemon attack: 106
+Pokemon defence: 65
+Pokemon Special Attack: 86
+Pokemon Special Defence: 65
+Pokemon speed: 85
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 459
+Pokemon name: Snover
+Pokemon type1: Grass
+Pokemon type2: Ice
+Pokemon total: 334
+Pokemon hp: 60
+Pokemon attack: 62
+Pokemon defence: 50
+Pokemon Special Attack: 62
+Pokemon Special Defence: 60
+Pokemon speed: 40
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 460
+Pokemon name: Abomasnow
+Pokemon type1: Grass
+Pokemon type2: Ice
+Pokemon total: 494
+Pokemon hp: 90
+Pokemon attack: 92
+Pokemon defence: 75
+Pokemon Special Attack: 92
+Pokemon Special Defence: 85
+Pokemon speed: 60
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 460
+Pokemon name: AbomasnowMega Abomasnow
+Pokemon type1: Grass
+Pokemon type2: Ice
+Pokemon total: 594
+Pokemon hp: 90
+Pokemon attack: 132
+Pokemon defence: 105
+Pokemon Special Attack: 132
+Pokemon Special Defence: 105
+Pokemon speed: 30
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 465
+Pokemon name: Tangrowth
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 535
+Pokemon hp: 115
+Pokemon attack: 140
+Pokemon defence: 130
+Pokemon Special Attack: 55
+Pokemon Special Defence: 55
+Pokemon speed: 40
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 470
+Pokemon name: Leafeon
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 515
+Pokemon hp: 86
+Pokemon attack: 76
+Pokemon defence: 86
+Pokemon Special Attack: 116
+Pokemon Special Defence: 56
+Pokemon speed: 95
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 492
+Pokemon name: ShayminLand Forme
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 680
+Pokemon hp: 150
+Pokemon attack: 120
+Pokemon defence: 100
+Pokemon Special Attack: 120
+Pokemon Special Defence: 100
+Pokemon speed: 90
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 492
+Pokemon name: ShayminSky Forme
+Pokemon type1: Grass
+Pokemon type2: Flying
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 103
+Pokemon defence: 75
+Pokemon Special Attack: 120
+Pokemon Special Defence: 75
+Pokemon speed: 127
+Pokemon generation: 52
+Pokemon legenday status: Yes
+
+Pokemon number: 495
+Pokemon name: Snivy
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 496
+Pokemon name: Servine
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 497
+Pokemon name: Serperior
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 100
+Pokemon attack: 100
+Pokemon defence: 100
+Pokemon Special Attack: 100
+Pokemon Special Defence: 100
+Pokemon speed: 100
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 511
+Pokemon name: Pansage
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 528
+Pokemon hp: 110
+Pokemon attack: 123
+Pokemon defence: 65
+Pokemon Special Attack: 100
+Pokemon Special Defence: 65
+Pokemon speed: 65
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 512
+Pokemon name: Simisage
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 528
+Pokemon hp: 110
+Pokemon attack: 123
+Pokemon defence: 65
+Pokemon Special Attack: 100
+Pokemon Special Defence: 65
+Pokemon speed: 65
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 546
+Pokemon name: Cottonee
+Pokemon type1: Grass
+Pokemon type2: Fairy
+Pokemon total: 280
+Pokemon hp: 40
+Pokemon attack: 27
+Pokemon defence: 60
+Pokemon Special Attack: 37
+Pokemon Special Defence: 50
+Pokemon speed: 66
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 547
+Pokemon name: Whimsicott
+Pokemon type1: Grass
+Pokemon type2: Fairy
+Pokemon total: 480
+Pokemon hp: 60
+Pokemon attack: 67
+Pokemon defence: 85
+Pokemon Special Attack: 77
+Pokemon Special Defence: 75
+Pokemon speed: 116
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 548
+Pokemon name: Petilil
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 480
+Pokemon hp: 60
+Pokemon attack: 67
+Pokemon defence: 85
+Pokemon Special Attack: 77
+Pokemon Special Defence: 75
+Pokemon speed: 116
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 549
+Pokemon name: Lilligant
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 480
+Pokemon hp: 60
+Pokemon attack: 67
+Pokemon defence: 85
+Pokemon Special Attack: 77
+Pokemon Special Defence: 75
+Pokemon speed: 116
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 556
+Pokemon name: Maractus
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 540
+Pokemon hp: 105
+Pokemon attack: 30
+Pokemon defence: 105
+Pokemon Special Attack: 140
+Pokemon Special Defence: 105
+Pokemon speed: 55
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 590
+Pokemon name: Foongus
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 294
+Pokemon hp: 69
+Pokemon attack: 55
+Pokemon defence: 45
+Pokemon Special Attack: 55
+Pokemon Special Defence: 55
+Pokemon speed: 15
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 591
+Pokemon name: Amoonguss
+Pokemon type1: Grass
+Pokemon type2: Poison
+Pokemon total: 464
+Pokemon hp: 114
+Pokemon attack: 85
+Pokemon defence: 70
+Pokemon Special Attack: 85
+Pokemon Special Defence: 80
+Pokemon speed: 30
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 597
+Pokemon name: Ferroseed
+Pokemon type1: Grass
+Pokemon type2: Steel
+Pokemon total: 305
+Pokemon hp: 44
+Pokemon attack: 50
+Pokemon defence: 91
+Pokemon Special Attack: 24
+Pokemon Special Defence: 86
+Pokemon speed: 10
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 598
+Pokemon name: Ferrothorn
+Pokemon type1: Grass
+Pokemon type2: Steel
+Pokemon total: 489
+Pokemon hp: 74
+Pokemon attack: 94
+Pokemon defence: 131
+Pokemon Special Attack: 54
+Pokemon Special Defence: 116
+Pokemon speed: 20
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 640
+Pokemon name: Virizion
+Pokemon type1: Grass
+Pokemon type2: Fighting
+Pokemon total: 580
+Pokemon hp: 91
+Pokemon attack: 90
+Pokemon defence: 72
+Pokemon Special Attack: 90
+Pokemon Special Defence: 129
+Pokemon speed: 108
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 650
+Pokemon name: Chespin
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 71
+Pokemon attack: 120
+Pokemon defence: 95
+Pokemon Special Attack: 120
+Pokemon Special Defence: 95
+Pokemon speed: 99
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 651
+Pokemon name: Quilladin
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 600
+Pokemon hp: 71
+Pokemon attack: 120
+Pokemon defence: 95
+Pokemon Special Attack: 120
+Pokemon Special Defence: 95
+Pokemon speed: 99
+Pokemon generation: 53
+Pokemon legenday status: Yes
+
+Pokemon number: 652
+Pokemon name: Chesnaught
+Pokemon type1: Grass
+Pokemon type2: Fighting
+Pokemon total: 530
+Pokemon hp: 88
+Pokemon attack: 107
+Pokemon defence: 122
+Pokemon Special Attack: 74
+Pokemon Special Defence: 75
+Pokemon speed: 64
+Pokemon generation: 54
+Pokemon legenday status: Yes
+
+Pokemon number: 672
+Pokemon name: Skiddo
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 507
+Pokemon hp: 86
+Pokemon attack: 68
+Pokemon defence: 72
+Pokemon Special Attack: 109
+Pokemon Special Defence: 66
+Pokemon speed: 106
+Pokemon generation: 54
+Pokemon legenday status: Yes
+
+Pokemon number: 673
+Pokemon name: Gogoat
+Pokemon type1: Grass
+Pokemon type2: 
+Pokemon total: 507
+Pokemon hp: 86
+Pokemon attack: 68
+Pokemon defence: 72
+Pokemon Special Attack: 109
+Pokemon Special Defence: 66
+Pokemon speed: 106
+Pokemon generation: 54
+Pokemon legenday status: Yes
+
