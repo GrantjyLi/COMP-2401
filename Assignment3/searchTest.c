@@ -35,7 +35,7 @@ int getPokemon(Pokemon **pokeDeck, int deckSize) {
     char line[100];
     fgets(line, sizeof(line), file);
     while (fgets(line, sizeof(line), file) != NULL){
-        
+        temp.type2[0] = '\0';
         sscanf(line, "%d,%[^,],%[^,],%[^,],%d,%d,%d,%d,%d,%d,%d,%c,%c\n",
                   &temp.number,
                   temp.name,
@@ -52,6 +52,7 @@ int getPokemon(Pokemon **pokeDeck, int deckSize) {
                   &temp.legendary);
 
         if (strcmp(temp.type1, input) == 0) {
+            //if(temp.type2[0] == '\0') temp.type2[0] = "N/A";
             deckSize++;
             *pokeDeck = realloc(*pokeDeck, deckSize * sizeof(Pokemon));
             
@@ -69,7 +70,9 @@ int main(){
     Pokemon *pokeDeck = (Pokemon*)malloc(0);
 
     int decksize = getPokemon(&pokeDeck, 0);
-
+    for(int i=0; i<decksize; i++){
+        printf("%s, %s, %s\n", pokeDeck[i].name, pokeDeck[i].type1, pokeDeck[i].type2);
+    }
     printf("%d", decksize);
 
     free(pokeDeck);
