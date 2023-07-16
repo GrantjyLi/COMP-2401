@@ -67,6 +67,7 @@ void *getPokemon(void *dataIn) {
         }
     }
     fclose(fp);
+
 }
 
 void *savePokemon(void *dataIn){
@@ -90,26 +91,32 @@ void *savePokemon(void *dataIn){
 
         fprintf(saveFile, "\n");
     }
-    printf("saved");
     fclose(saveFile);
+
 }
 
 void menu(SharedData data){
-    int deckSize = 0;
-    pthread_t *threads = malloc(0);
-    int numThreads =0;
 
     FILE * fp = fopen(data.readFileName, "r");
-    while(fp == NULL){//possible memory leak with file
+    while(fp == NULL){
         printf("File not found, enter 'n' to exit or file name again: ");
-        scanf(" %ms", &(data.readFileName));
+        scanf(" %m[^\n]", &(data.readFileName));
 
-        if((data.readFileName)[0] =='n'){
+        if(data.readFileName[0] =='n'){
             printf("Program exiting...");
+                free(data.pokeDeck);
+                free(data.pokeType);
+                free(data.readFileName);
+                free(data.writeFileName);
+            return;
         }
         fp = fopen(data.readFileName, "r");
     }
     fclose(fp);
+
+    pthread_t *threads = malloc(0);
+    int deckSize = 0;
+    int numThreads =0;
 
     do{
         printf("\nMenu options:\n");
@@ -119,7 +126,7 @@ void menu(SharedData data){
         printf("Enter your option: ");
 
         int choice;
-        scanf(" %d", &choice);
+        scanf("%d", &choice);
 
         switch (choice){
             case 1:
@@ -139,7 +146,15 @@ void menu(SharedData data){
 
                 break;
             default:
+                //!!!!!!!!!!!
+                for(int i= 0; i<numThreads; i++){
+                    pthread_detach(threads[i]);
+                }
                 free(threads);
+                free(data.pokeDeck);
+                free(data.pokeType);
+                free(data.readFileName);
+                free(data.writeFileName);
                 return;
         }
     }while(1);
@@ -156,6 +171,7 @@ int main(){
             .pokeType = NULL, 
             .flag = 0};
 
+
     printf("Include file prefix. i.e: \"test.txt\"\n");
     printf("Enter destination file name: ");
     scanf("%m[^\n]", &(data.readFileName));
@@ -163,13 +179,9 @@ int main(){
     pthread_mutex_init(&data.mutex, NULL);
     
     menu(data);
+    pthread_mutex_destroy(&data.mutex);
 
     printf("\nEnding Program.");
-
-    free(pokeDeck);
-    free(data.pokeType);
-    free(data.readFileName);
-    free(data.writeFileName);
 
     return 0;
 }
