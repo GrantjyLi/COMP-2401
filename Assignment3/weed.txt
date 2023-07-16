@@ -1,0 +1,440 @@
+Pokemon: #25 -Pikachu
+Pokemon Types: Electric - 
+Pokemon Total: 442
+Pokemon HP: 65
+Pokemon Attack & Defence: 90 - 65
+Pokemon Special Attack & Defence: 61 - 61
+Pokemon Speed: 100
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #26 -Raichu
+Pokemon Types: Electric - 
+Pokemon Total: 442
+Pokemon HP: 65
+Pokemon Attack & Defence: 90 - 65
+Pokemon Special Attack & Defence: 61 - 61
+Pokemon Speed: 100
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #81 -Magnemite
+Pokemon Types: Electric - Steel
+Pokemon Total: 325
+Pokemon HP: 25
+Pokemon Attack & Defence: 35 - 70
+Pokemon Special Attack & Defence: 95 - 55
+Pokemon Speed: 45
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #82 -Magneton
+Pokemon Types: Electric - Steel
+Pokemon Total: 465
+Pokemon HP: 50
+Pokemon Attack & Defence: 60 - 95
+Pokemon Special Attack & Defence: 120 - 70
+Pokemon Speed: 70
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #100 -Voltorb
+Pokemon Types: Electric - 
+Pokemon Total: 385
+Pokemon HP: 35
+Pokemon Attack & Defence: 45 - 160
+Pokemon Special Attack & Defence: 30 - 45
+Pokemon Speed: 70
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #101 -Electrode
+Pokemon Types: Electric - 
+Pokemon Total: 385
+Pokemon HP: 35
+Pokemon Attack & Defence: 45 - 160
+Pokemon Special Attack & Defence: 30 - 45
+Pokemon Speed: 70
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #125 -Electabuzz
+Pokemon Types: Electric - 
+Pokemon Total: 455
+Pokemon HP: 65
+Pokemon Attack & Defence: 50 - 35
+Pokemon Special Attack & Defence: 115 - 95
+Pokemon Speed: 95
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #135 -Jolteon
+Pokemon Types: Electric - 
+Pokemon Total: 535
+Pokemon HP: 130
+Pokemon Attack & Defence: 85 - 80
+Pokemon Special Attack & Defence: 85 - 95
+Pokemon Speed: 60
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #145 -Zapdos
+Pokemon Types: Electric - Flying
+Pokemon Total: 580
+Pokemon HP: 90
+Pokemon Attack & Defence: 90 - 85
+Pokemon Special Attack & Defence: 125 - 90
+Pokemon Speed: 100
+Pokemon Generation: 49
+Pokemon legenday status: Yes
+
+Pokemon: #172 -Pichu
+Pokemon Types: Electric - 
+Pokemon Total: 460
+Pokemon HP: 125
+Pokemon Attack & Defence: 58 - 58
+Pokemon Special Attack & Defence: 76 - 76
+Pokemon Speed: 67
+Pokemon Generation: 50
+Pokemon legenday status: Yes
+
+Pokemon: #179 -Mareep
+Pokemon Types: Electric - 
+Pokemon Total: 470
+Pokemon HP: 65
+Pokemon Attack & Defence: 75 - 70
+Pokemon Special Attack & Defence: 95 - 70
+Pokemon Speed: 95
+Pokemon Generation: 50
+Pokemon legenday status: Yes
+
+Pokemon: #180 -Flaaffy
+Pokemon Types: Electric - 
+Pokemon Total: 470
+Pokemon HP: 65
+Pokemon Attack & Defence: 75 - 70
+Pokemon Special Attack & Defence: 95 - 70
+Pokemon Speed: 95
+Pokemon Generation: 50
+Pokemon legenday status: Yes
+
+Pokemon: #181 -Ampharos
+Pokemon Types: Electric - 
+Pokemon Total: 470
+Pokemon HP: 65
+Pokemon Attack & Defence: 75 - 70
+Pokemon Special Attack & Defence: 95 - 70
+Pokemon Speed: 95
+Pokemon Generation: 50
+Pokemon legenday status: Yes
+
+Pokemon: #181 -AmpharosMega Ampharos
+Pokemon Types: Electric - Dragon
+Pokemon Total: 610
+Pokemon HP: 90
+Pokemon Attack & Defence: 95 - 105
+Pokemon Special Attack & Defence: 165 - 110
+Pokemon Speed: 45
+Pokemon Generation: 50
+Pokemon legenday status: Yes
+
+Pokemon: #239 -Elekid
+Pokemon Types: Electric - 
+Pokemon Total: 305
+Pokemon HP: 45
+Pokemon Attack & Defence: 30 - 15
+Pokemon Special Attack & Defence: 85 - 65
+Pokemon Speed: 65
+Pokemon Generation: 50
+Pokemon legenday status: Yes
+
+Pokemon: #243 -Raikou
+Pokemon Types: Electric - 
+Pokemon Total: 305
+Pokemon HP: 45
+Pokemon Attack & Defence: 30 - 15
+Pokemon Special Attack & Defence: 85 - 65
+Pokemon Speed: 65
+Pokemon Generation: 50
+Pokemon legenday status: Yes
+
+Pokemon: #309 -Electrike
+Pokemon Types: Electric - 
+Pokemon Total: 510
+Pokemon HP: 60
+Pokemon Attack & Defence: 100 - 85
+Pokemon Special Attack & Defence: 80 - 85
+Pokemon Speed: 100
+Pokemon Generation: 51
+Pokemon legenday status: Yes
+
+Pokemon: #310 -Manectric
+Pokemon Types: Electric - 
+Pokemon Total: 510
+Pokemon HP: 60
+Pokemon Attack & Defence: 100 - 85
+Pokemon Special Attack & Defence: 80 - 85
+Pokemon Speed: 100
+Pokemon Generation: 51
+Pokemon legenday status: Yes
+
+Pokemon: #310 -ManectricMega Manectric
+Pokemon Types: Electric - 
+Pokemon Total: 510
+Pokemon HP: 60
+Pokemon Attack & Defence: 100 - 85
+Pokemon Special Attack & Defence: 80 - 85
+Pokemon Speed: 100
+Pokemon Generation: 51
+Pokemon legenday status: Yes
+
+Pokemon: #311 -Plusle
+Pokemon Types: Electric - 
+Pokemon Total: 510
+Pokemon HP: 60
+Pokemon Attack & Defence: 100 - 85
+Pokemon Special Attack & Defence: 80 - 85
+Pokemon Speed: 100
+Pokemon Generation: 51
+Pokemon legenday status: Yes
+
+Pokemon: #312 -Minun
+Pokemon Types: Electric - 
+Pokemon Total: 510
+Pokemon HP: 60
+Pokemon Attack & Defence: 100 - 85
+Pokemon Special Attack & Defence: 80 - 85
+Pokemon Speed: 100
+Pokemon Generation: 51
+Pokemon legenday status: Yes
+
+Pokemon: #403 -Shinx
+Pokemon Types: Electric - 
+Pokemon Total: 410
+Pokemon HP: 79
+Pokemon Attack & Defence: 85 - 60
+Pokemon Special Attack & Defence: 55 - 60
+Pokemon Speed: 71
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #404 -Luxio
+Pokemon Types: Electric - 
+Pokemon Total: 410
+Pokemon HP: 79
+Pokemon Attack & Defence: 85 - 60
+Pokemon Special Attack & Defence: 55 - 60
+Pokemon Speed: 71
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #405 -Luxray
+Pokemon Types: Electric - 
+Pokemon Total: 410
+Pokemon HP: 79
+Pokemon Attack & Defence: 85 - 60
+Pokemon Special Attack & Defence: 55 - 60
+Pokemon Speed: 71
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #417 -Pachirisu
+Pokemon Types: Electric - 
+Pokemon Total: 474
+Pokemon HP: 70
+Pokemon Attack & Defence: 80 - 102
+Pokemon Special Attack & Defence: 80 - 102
+Pokemon Speed: 40
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #462 -Magnezone
+Pokemon Types: Electric - Steel
+Pokemon Total: 535
+Pokemon HP: 70
+Pokemon Attack & Defence: 70 - 115
+Pokemon Special Attack & Defence: 130 - 90
+Pokemon Speed: 60
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #466 -Electivire
+Pokemon Types: Electric - 
+Pokemon Total: 535
+Pokemon HP: 115
+Pokemon Attack & Defence: 140 - 130
+Pokemon Special Attack & Defence: 55 - 55
+Pokemon Speed: 40
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #479 -Rotom
+Pokemon Types: Electric - Ghost
+Pokemon Total: 440
+Pokemon HP: 50
+Pokemon Attack & Defence: 50 - 77
+Pokemon Special Attack & Defence: 95 - 77
+Pokemon Speed: 91
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #479 -RotomHeat Rotom
+Pokemon Types: Electric - Fire
+Pokemon Total: 520
+Pokemon HP: 50
+Pokemon Attack & Defence: 65 - 107
+Pokemon Special Attack & Defence: 105 - 107
+Pokemon Speed: 86
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #479 -RotomWash Rotom
+Pokemon Types: Electric - Water
+Pokemon Total: 520
+Pokemon HP: 50
+Pokemon Attack & Defence: 65 - 107
+Pokemon Special Attack & Defence: 105 - 107
+Pokemon Speed: 86
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #479 -RotomFrost Rotom
+Pokemon Types: Electric - Ice
+Pokemon Total: 520
+Pokemon HP: 50
+Pokemon Attack & Defence: 65 - 107
+Pokemon Special Attack & Defence: 105 - 107
+Pokemon Speed: 86
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #479 -RotomFan Rotom
+Pokemon Types: Electric - Flying
+Pokemon Total: 520
+Pokemon HP: 50
+Pokemon Attack & Defence: 65 - 107
+Pokemon Special Attack & Defence: 105 - 107
+Pokemon Speed: 86
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #479 -RotomMow Rotom
+Pokemon Types: Electric - Grass
+Pokemon Total: 520
+Pokemon HP: 50
+Pokemon Attack & Defence: 65 - 107
+Pokemon Special Attack & Defence: 105 - 107
+Pokemon Speed: 86
+Pokemon Generation: 52
+Pokemon legenday status: Yes
+
+Pokemon: #522 -Blitzle
+Pokemon Types: Electric - 
+Pokemon Total: 488
+Pokemon HP: 80
+Pokemon Attack & Defence: 115 - 80
+Pokemon Special Attack & Defence: 65 - 55
+Pokemon Speed: 93
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #523 -Zebstrika
+Pokemon Types: Electric - 
+Pokemon Total: 488
+Pokemon HP: 80
+Pokemon Attack & Defence: 115 - 80
+Pokemon Special Attack & Defence: 65 - 55
+Pokemon Speed: 93
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #587 -Emolga
+Pokemon Types: Electric - Flying
+Pokemon Total: 428
+Pokemon HP: 55
+Pokemon Attack & Defence: 75 - 60
+Pokemon Special Attack & Defence: 75 - 60
+Pokemon Speed: 103
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #602 -Tynamo
+Pokemon Types: Electric - 
+Pokemon Total: 489
+Pokemon HP: 74
+Pokemon Attack & Defence: 94 - 131
+Pokemon Special Attack & Defence: 54 - 116
+Pokemon Speed: 20
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #603 -Eelektrik
+Pokemon Types: Electric - 
+Pokemon Total: 489
+Pokemon HP: 74
+Pokemon Attack & Defence: 94 - 131
+Pokemon Special Attack & Defence: 54 - 116
+Pokemon Speed: 20
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #604 -Eelektross
+Pokemon Types: Electric - 
+Pokemon Total: 489
+Pokemon HP: 74
+Pokemon Attack & Defence: 94 - 131
+Pokemon Special Attack & Defence: 54 - 116
+Pokemon Speed: 20
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #642 -ThundurusIncarnate Forme
+Pokemon Types: Electric - Flying
+Pokemon Total: 580
+Pokemon HP: 79
+Pokemon Attack & Defence: 115 - 70
+Pokemon Special Attack & Defence: 125 - 80
+Pokemon Speed: 111
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #642 -ThundurusTherian Forme
+Pokemon Types: Electric - Flying
+Pokemon Total: 580
+Pokemon HP: 79
+Pokemon Attack & Defence: 105 - 70
+Pokemon Special Attack & Defence: 145 - 80
+Pokemon Speed: 101
+Pokemon Generation: 53
+Pokemon legenday status: Yes
+
+Pokemon: #694 -Helioptile
+Pokemon Types: Electric - Normal
+Pokemon Total: 289
+Pokemon HP: 44
+Pokemon Attack & Defence: 38 - 33
+Pokemon Special Attack & Defence: 61 - 43
+Pokemon Speed: 70
+Pokemon Generation: 54
+Pokemon legenday status: Yes
+
+Pokemon: #695 -Heliolisk
+Pokemon Types: Electric - Normal
+Pokemon Total: 481
+Pokemon HP: 62
+Pokemon Attack & Defence: 55 - 52
+Pokemon Special Attack & Defence: 109 - 94
+Pokemon Speed: 109
+Pokemon Generation: 54
+Pokemon legenday status: Yes
+
+Pokemon: #702 -Dedenne
+Pokemon Types: Electric - Fairy
+Pokemon Total: 431
+Pokemon HP: 67
+Pokemon Attack & Defence: 58 - 57
+Pokemon Special Attack & Defence: 81 - 67
+Pokemon Speed: 101
+Pokemon Generation: 54
+Pokemon legenday status: Yes
+

@@ -6,7 +6,7 @@
             "name": "C/C++: gcc build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\Assignment2\\MCP.exe",
+            "program": "${workspaceFolder}\\Assignment3\\main.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

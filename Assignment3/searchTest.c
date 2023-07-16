@@ -52,7 +52,6 @@ int getPokemon(Pokemon **pokeDeck, int deckSize) {
                   &temp.legendary);
 
         if (strcmp(temp.type1, input) == 0) {
-            //if(temp.type2[0] == '\0') temp.type2[0] = "N/A";
             deckSize++;
             *pokeDeck = realloc(*pokeDeck, deckSize * sizeof(Pokemon));
             

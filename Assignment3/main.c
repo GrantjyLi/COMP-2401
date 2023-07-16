@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <pthread.h>
 
 typedef struct{
     int number;
@@ -18,15 +19,26 @@ typedef struct{
     char legendary;
 } Pokemon;
 
-int getPokemon(FILE *file, Pokemon **pokeDeck, int deckSize) {
-    char *input;
-    printf("\nEnter Pokemon type: ");
-    scanf(" %m[^\n]", &input);
+typedef struct{
+    int deckSize;
+    Pokemon *pokeDeck;
+    char * pokeType;
+    char * readFileName;
+    char * writeFileName;
+    char flag;
+    pthread_mutex_t mutex;
+} SharedData;
+
+void *getPokemon(void *dataIn) {
+    SharedData *data = (SharedData*)dataIn;
 
     Pokemon temp;
+
+    FILE *fp = fopen(data->readFileName, "r");
+
     char line[100];
-    fgets(line, sizeof(line), file);
-    while (fgets(line, sizeof(line), file) != NULL){
+    fgets(line, sizeof(line), fp);
+    while (fgets(line, sizeof(line), fp) != NULL){
         
         temp.type2[0] = '\0';
         sscanf(line, "%d,%[^,],%[^,],%[^,],%d,%d,%d,%d,%d,%d,%d,%c,%c\n",
@@ -44,50 +56,60 @@ int getPokemon(FILE *file, Pokemon **pokeDeck, int deckSize) {
                   &temp.generation,
                   &temp.legendary);
 
-        if (strcmp(temp.type1, input) == 0) {
-            deckSize++;
-            *pokeDeck = realloc(*pokeDeck, deckSize * sizeof(Pokemon)); 
-            memcpy(&((*pokeDeck)[deckSize - 1]), &temp, sizeof(Pokemon));
+        if (strcmp(temp.type1, data->pokeType) == 0) {
+            pthread_mutex_lock(&(data->mutex));
+            
+            data->deckSize++;
+            data->pokeDeck = realloc(data->pokeDeck, data->deckSize * sizeof(Pokemon));
+            memcpy(&(data->pokeDeck[data->deckSize-1]), &temp, sizeof(Pokemon));
+            
+            pthread_mutex_unlock(&(data->mutex));
         }
     }
-    free(input);
-    return deckSize;
+    fclose(fp);
 }
 
-void savePokemon(Pokemon *pokeDeck, int size){
-    char *fname;
-    printf("\nEnter your save file name (new file name only): ");
-    scanf(" %m[^\n]", &fname);
+void *savePokemon(void *dataIn){
+    SharedData *data = (SharedData*)dataIn;
+    FILE *saveFile = fopen(data->writeFileName, "w");
 
-    FILE *saveFile = fopen(fname, "a");
+    for (int i = 0; i < data->deckSize; i++){
+        fprintf(saveFile, "Pokemon: #%d - %s", data->pokeDeck[i].number, data->pokeDeck[i].name);
+        fprintf(saveFile, "\nPokemon Types: %s - %s", data->pokeDeck[i].type1, data->pokeDeck[i].type2);
+        fprintf(saveFile, "\nPokemon Total: %d", data->pokeDeck[i].total);
+        fprintf(saveFile, "\nPokemon HP: %d", data->pokeDeck[i].hp);
+        fprintf(saveFile, "\nPokemon Attack & Defence: %d - %d", data->pokeDeck[i].attack, data->pokeDeck[i].defence);
+        fprintf(saveFile, "\nPokemon Special Attack & Defence: %d - %d", data->pokeDeck[i].specialAttack,  data->pokeDeck[i].specialDefence);
+        fprintf(saveFile, "\nPokemon Speed: %d", data->pokeDeck[i].speed);
+        fprintf(saveFile, "\nPokemon Generation: %d", data->pokeDeck[i].generation);
+        fprintf(saveFile, "\nPokemon legendary status: ");
 
-    for (int i = 0; i < size; i++){
-        fprintf(saveFile, "Pokemon number: %d", pokeDeck[i].number);
-        fprintf(saveFile, "\nPokemon name: %s", pokeDeck[i].name);
-        fprintf(saveFile, "\nPokemon type1: %s", pokeDeck[i].type1);
-        fprintf(saveFile, "\nPokemon type2: %s", pokeDeck[i].type2);
-        fprintf(saveFile, "\nPokemon total: %d", pokeDeck[i].total);
-        fprintf(saveFile, "\nPokemon hp: %d", pokeDeck[i].hp);
-        fprintf(saveFile, "\nPokemon attack: %d", pokeDeck[i].attack);
-        fprintf(saveFile, "\nPokemon defence: %d", pokeDeck[i].defence);
-        fprintf(saveFile, "\nPokemon Special Attack: %d", pokeDeck[i].specialAttack);
-        fprintf(saveFile, "\nPokemon Special Defence: %d", pokeDeck[i].specialDefence);
-        fprintf(saveFile, "\nPokemon speed: %d", pokeDeck[i].speed);
-        fprintf(saveFile, "\nPokemon generation: %d", pokeDeck[i].generation);
-        fprintf(saveFile, "\nPokemon legenday status: ");
-
-        if(pokeDeck[i].specialDefence == 0){
+        if(data->pokeDeck[i].specialDefence == 0){
             fprintf(saveFile, "No\n");
         }else{fprintf(saveFile, "Yes\n");}
 
         fprintf(saveFile, "\n");
     }
+    printf("saved");
     fclose(saveFile);
-    free(fname);
 }
 
-void menu(FILE *fp, Pokemon *pokeDeck){
+void menu(SharedData data){
     int deckSize = 0;
+    pthread_t *threads = malloc(0);
+    int numThreads =0;
+
+    FILE * fp = fopen(data.readFileName, "r");
+    while(fp == NULL){//possible memory leak with file
+        printf("File not found, enter 'n' to exit or file name again: ");
+        scanf(" %ms", &(data.readFileName));
+
+        if((data.readFileName)[0] =='n'){
+            printf("Program exiting...");
+        }
+        fp = fopen(data.readFileName, "r");
+    }
+    fclose(fp);
 
     do{
         printf("\nMenu options:\n");
@@ -97,51 +119,57 @@ void menu(FILE *fp, Pokemon *pokeDeck){
         printf("Enter your option: ");
 
         int choice;
-        scanf("%d", &choice);
+        scanf(" %d", &choice);
 
         switch (choice){
             case 1:
-                deckSize = getPokemon(fp, &pokeDeck, deckSize);
+                printf("\nEnter Pokemon type: ");
+                scanf(" %m[^\n]", &(data.pokeType));
+
+                threads = realloc(threads, ++numThreads *sizeof(SharedData));
+                pthread_create(&(threads[numThreads-1]), NULL, getPokemon, (void*)&data);
+                
                 break;
             case 2:
-                savePokemon(pokeDeck, deckSize);
+                printf("\nEnter your save file name (new file name only): ");
+                scanf(" %m[^\n]", &(data.writeFileName));
+
+                threads = realloc(threads, ++numThreads *sizeof(SharedData));
+                pthread_create(&(threads[numThreads-1]), NULL, savePokemon, (void*)&data);
+
                 break;
             default:
+                free(threads);
                 return;
         }
     }while(1);
+    free(threads);
 }
 
 int main(){
-    char *input;
+    Pokemon * pokeDeck = (Pokemon*)malloc(0);
+    SharedData data = {
+            .deckSize = 0, 
+            .pokeDeck = pokeDeck, 
+            .readFileName = NULL, 
+            .writeFileName = NULL, 
+            .pokeType = NULL, 
+            .flag = 0};
 
     printf("Include file prefix. i.e: \"test.txt\"\n");
     printf("Enter destination file name: ");
-    scanf("%m[^\n]", &input);
+    scanf("%m[^\n]", &(data.readFileName));
 
-    FILE *fp = fopen(input, "r");
-
-    while(fp == NULL){
-        printf("File not found, enter 'n' to exit or file name again: ");
-        scanf(" %ms", &input);
-
-        if(input[0] =='n'){
-            printf("Program exiting...");
-            return 0;
-        }
-
-        fp = fopen(input, "r");
-    }
-
-    Pokemon * pokeDeck = (Pokemon*)malloc(0);
-
-    menu(fp, pokeDeck);
+    pthread_mutex_init(&data.mutex, NULL);
+    
+    menu(data);
 
     printf("\nEnding Program.");
-    
-    fclose(fp);
-    free(input);
+
     free(pokeDeck);
+    free(data.pokeType);
+    free(data.readFileName);
+    free(data.writeFileName);
 
     return 0;
 }
