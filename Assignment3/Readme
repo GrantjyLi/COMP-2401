@@ -1,0 +1,17 @@
+Grant Li - #101258982
+
+Files included:
+Readme
+main.c
+FileIO.h
+FileIO.c
+Pokemon.csv
+Design_Document.pdf
+
+Instructions on running:
+1. let "AppName" be the name of the executable you want to create
+2. open a terminal instance at the location of this directory
+3. type into the terminal: "gcc -o AppName main.c FileIO.c"
+4. press enter
+5. type into the terminal: "./AppName"
+6. use the executable as prefered
