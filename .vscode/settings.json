@@ -3,6 +3,8 @@
     "files.associations": {
         "bit_functions.h": "c",
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "pthread.h": "c",
+        "string.h": "c"
     }
 }

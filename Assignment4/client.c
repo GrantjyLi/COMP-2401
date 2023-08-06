@@ -123,7 +123,7 @@ int menu(SharedData data){ // menu function
         printf("\nMenu options:\n");
         printf("1. Type search\n");
         printf("2. Save results\n");
-        printf("3 or other. Exit the program\n");
+        printf("3. Exit the program\n");
         printf("Enter your option: ");
 
         int choice;
@@ -157,7 +157,7 @@ int menu(SharedData data){ // menu function
                 pthread_create(&(threads[numThreads-1]), NULL, savePokemon, (void*)&data);
 
                 break;
-            default:
+            case 3:
                 data.flag = 1; // set flag to stop all threads
 
                 send(data.clientSocket, &(data.flag), sizeof(char), 0);
@@ -170,6 +170,9 @@ int menu(SharedData data){ // menu function
                 free(threads);
                 freedata(&data);
                 return totalQueries;
+            default:
+                printf("Please enter either 1, 2 or 3:");
+                scanf("%d", &choice);
         }
     }while(1);
     free(threads);

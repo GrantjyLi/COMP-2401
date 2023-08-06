@@ -17,7 +17,7 @@ char * getReadFile(){
         if(fileName[0] =='n'){ //exiting after freeing data 
             printf("Program exiting...");
             free(fileName);
-            return 0;
+            return (char*)-1;
         }
         fp = fopen(fileName, "r");
     }
@@ -52,6 +52,8 @@ int main() {
     addrSize = sizeof(clientAddr);
 
     char *readFile = getReadFile();
+    if(readFile == (char*)-1){return -1;}
+
     while (1) {
 
         clientSocket = accept(serverSocket,(struct sockaddr *)&clientAddr, &addrSize);
@@ -60,18 +62,21 @@ int main() {
         printf("SERVER: Recieved client connection.\n");
 
         //client input variables
-        char *pokeType = (char *)malloc(0);
-        char *pokeDeck;
+        char *pokeType;
+        char **pokeDeckArr;
+        char *pokDeckString;
+        int numPokemon;
         size_t size;
         char flag;
         while (1) { // Timeout occurred, no client ready
-            pokeDeck = (char*)malloc(0);
-
-            //IMPLEMENT STOP CONDITION
+            //STOP CONDITION
             bytesReceived = recv(clientSocket, &flag, sizeof(char), 0);
             if(flag == 1){
                 printf("SERVER: Client finished.\n");
                 break;}
+
+            pokeDeckArr = (char**)malloc(0);
+            pokeType = (char*)malloc(0);
 
             //getting type of Pokemon to search for
             bytesReceived = recv(clientSocket, &size, sizeof(size_t), 0);
@@ -85,30 +90,26 @@ int main() {
             printf("SERVER: Received client Pokemon type: %s\n", pokeType);
 
             //search for the pokemon
-            pokeDeck = getPokemon(readFile, pokeType, pokeDeck);
-
-
-        FILE * fname = fopen("Shit.txt", "w");
-        fprintf(fname, "%s", pokeDeck);
-        fclose(fname);
-
+            numPokemon = getPokemon(readFile, pokeType, pokeDeckArr, &pokDeckString);
 
             printf("SERVER: Finished search for type: %s\n", pokeType);
-            size = strlen(pokeDeck);
+            size = strlen(pokDeckString);
             
             //return number of pokemon found and a string of all them
             send(clientSocket, &size, sizeof(size_t), 0);
-            send(clientSocket, pokeDeck, size, 0);
+            send(clientSocket, pokDeckString, size, 0);
             printf("SERVER: Sent searched data for type: %s\n", pokeType);
-
-            free(pokeDeck);
+  
+            free(pokDeckString);
+            free(pokeType);
+            
         }
-        free(pokeType);
-        free(readFile);
+
         close(clientSocket);
         if(flag == 1)break;
     }
-
+    
+    free(readFile);
     close(serverSocket);
     printf("SERVER: Shutting down.\n");
 }

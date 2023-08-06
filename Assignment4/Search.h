@@ -5,8 +5,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-
 #define SERVER_PORT 6000
 
-char *getPokemon(char * fileName, char * pokeType, char *pokeDeck);
+int getPokemon(char * readFile, char * pokeType, char **deck, char **totalSearch);
 char * getReadFile();
